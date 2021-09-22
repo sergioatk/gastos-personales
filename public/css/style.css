@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(52, 63, 97);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+    background-color: red;
+    padding-left: 50px;
+    
+    
+}
+
+nav {
+    
+    text-align: end;
+    margin-top: 40px;
+}
+
+
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cuadro {
+    background-color: white;
+    padding: 50px;
+    border-radius: 13px;
+    margin: 20px;
+    margin-top: 50px;
+}
+
+.boton-enviar {
+    background-color: royalblue;
+    color: white;
+    overflow: auto;
+}
