@@ -29,46 +29,41 @@
                 <h2>Nuevo movimiento</h2>
 
 
-                <form action="/">
+                <form action="http://localhost:3000/movements" method="POST">
                     <div class="row g-2">
 
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="date" class="form-control" id="floatingInputGrid"
-                                    placeholder="name@example.com" value="mdo@example.com">
-                                <label for="floatingInputGrid">Fecha movimiento</label>
+                                <input type="date" class="form-control date-picker" id="date-input" name="date" required>
+                                <label for="date-input">Date</label>
                             </div>
                         </div>
 
 
                         <div class="col-md">
                             <div class="form-floating">
-                                <select class="form-select" id="floatingSelectGrid"
-                                    aria-label="Floating label select example">
-
-                                    <option value="ingreso">Ingreso</option>
-                                    <option value="egreso">Egreso</option>
-
+                                <select class="form-select" id="type-input" name="type">
+                                    <option value="income">Income</option>
+                                    <option value="expense">Expense</option>
                                 </select>
-                                <label for="floatingSelectGrid">Seleccionar movimiento</label>
+                                <label for="type-input">Type</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="description-input"
+                                    placeholder="Description..." name="description" required>
+                                <label for="description-input">Description</label>
                             </div>
                         </div>
 
 
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingInputGrid"
-                                    placeholder="Concepto...">
-                                <label for="floatingInputGrid">Concepto</label>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md">
-                            <div class="form-floating">
-                                <input type="number" class="form-control" id="floatingInputGrid"
-                                    placeholder="name@example.com" value="mdo@example.com" min="1">
-                                <label for="floatingInputGrid">Monto</label>
+                                <input type="number" class="form-control" id="amount-input" placeholder="Amount..."
+                                    min="1" name="amount" required>
+                                <label for="amount-input">Amount</label>
                             </div>
                         </div>
                         <div class="col-md">
@@ -81,23 +76,14 @@
 
                     </div>
                 </form>
-
-
-</div>
-
-                {{{body}}}
-
-
-
-
-
-            
+            </div>
+            {{{body}}}
         </div>
 
 
     </div>
 
-
+<script src="./js/main.js"></script>
 </body>
 
 </html>
