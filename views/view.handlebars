@@ -3,7 +3,7 @@
 
     {{#if data}}
 
-    <h2>Ultimos 10 movimientos:</h2>
+    <h2>Last 10 Movements</h2>
 
     <table class="table table-striped">
       <thead>
@@ -30,11 +30,24 @@
         <td>
           <button class="http-request btn btn-danger" data-method="DELETE"
             data-url="http://localhost:3000/movements/{{id}}">DELETE</button>
-          <a class="btn btn-warning" href="http://localhost:3000/movimientos/edit">EDIT</a>
+          <a class="btn btn-warning toggle-edit-form" href="http://localhost:3000/movements/edit/{{id}}">EDIT</a>
         </td>
-        {{!-- <td><a href="http://localhost:3000/movimientos/delete/{{id}}"><button
-              class="btn btn-warning">EDIT</button></a></td> --}}
-      </tr>
+
+     <tr>
+       <form action="">
+       <th>
+         <label for="new-date-{{id}}"></label>
+         <input type="date" name="new-date-{{id}}" id="new-date-{{id}}" required>
+       </th>
+       <td>es una</td>
+       <td>prueba</td>
+       </form>
+     </tr>
+     
+       
+      
+
+
 
       {{/each}}
 
@@ -64,18 +77,18 @@
   </div>
 
 
-  
+
 </div>
 <div class="col cuadro">
-    <div class="row">
-      <div class="col-md-4">
-        <h2>TOTAL</h2>
-      </div>
-      <div class="col-md-8"> <input class="form-control" type="text" value="Readonly input here..."
-          aria-label="readonly input example" readonly></div>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>TOTAL</h2>
     </div>
-
-
-
-
+    <div class="col-md-8"> <input class="form-control" type="text" value="Readonly input here..."
+        aria-label="readonly input example" readonly></div>
   </div>
+
+
+
+
+</div>
