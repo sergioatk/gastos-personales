@@ -1,48 +1,94 @@
 <div class="row">
-            <div class="col cuadro">
-                <h2>Ultimos 10 movimientos:</h2>
+  <div class="col cuadro">
 
-                <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
+    {{#if data}}
 
-            </div>
+    <h2>Last 10 Movements</h2>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Fecha</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Concepto</th>
+          <th scope="col">Monto</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+
+      {{#each data}}
 
 
-            <div class="col cuadro">
-                <div class="row">
-                    <div class="col-md-4"><h2>TOTAL</h2></div>
-                    <div class="col-md-8"> <input class="form-control" type="text" value="Readonly input here..." aria-label="readonly input example" readonly></div>
-                </div>
-                
-               
 
 
-            </div>
+      <tr>
+        <th scope="row">{{movement_date}}</th>
+        <td>{{movement_type}}</td>
+        <td>{{movement_description}}</td>
+        <td>{{movement_amount}}</td>
+        <td>
+          <button class="http-request btn btn-danger" data-method="DELETE"
+            data-url="http://localhost:3000/movements/{{id}}">DELETE</button>
+          <a class="btn btn-warning toggle-edit-form" href="http://localhost:3000/movements/edit/{{id}}">EDIT</a>
+        </td>
+
+     <tr>
+       <form action="">
+       <th>
+         <label for="new-date-{{id}}"></label>
+         <input type="date" name="new-date-{{id}}" id="new-date-{{id}}" required>
+       </th>
+       <td>es una</td>
+       <td>prueba</td>
+       </form>
+     </tr>
+     
+       
+      
+
+
+
+      {{/each}}
+
+      </tbody>
+    </table>
+
+
+
+
+
+
+    {{else}}
+
+
+
+    <h2>There's no movements to show</h2>
+
+
+
+
+
+
+    {{/if}}
+
+
+
+  </div>
+
+
+
+</div>
+<div class="col cuadro">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>TOTAL</h2>
+    </div>
+    <div class="col-md-8"> <input class="form-control" type="text" value="Readonly input here..."
+        aria-label="readonly input example" readonly></div>
+  </div>
+
+
+
+
+</div>

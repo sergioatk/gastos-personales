@@ -1,6 +1,9 @@
 body {
     background-color: rgb(52, 63, 97);
 }
+button {
+    display: block;
+}
 
 a {
     text-decoration: none;
@@ -38,4 +41,9 @@ h1 {
     background-color: royalblue;
     color: white;
     overflow: auto;
+}
+
+.delete-button {
+    background-color: chartreuse;
+    color: black;
 }
