@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "8675ab99-de0d-42ca-b0d7-8b6dca1cca4b",
+		"name": "presupuesto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movements/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movements",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get movement by type (income)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movements/type/income",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movements",
+						"type",
+						"income"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get movement by type (expense)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movements/type/expense",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movements",
+						"type",
+						"expense"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movimiento by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movements/id/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movements",
+						"id",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear movimiento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-11-03\",\r\n    \"type\": \"ingreso\",\r\n    \"description\": \"mas\",\r\n    \"amount\": \"180000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movements/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movements",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete expense by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/movimientos/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movimientos",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit movement",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2021-09-28\",\r\n    \"description\": \"this is a new record\",\r\n    \"amount\": \"34000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movimientos/50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movimientos",
+						"50"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
