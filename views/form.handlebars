@@ -1,0 +1,95 @@
+<div class="col add-expense cuadro">
+
+    {{#if data.id}}
+
+    <h2>Edit Movement</h2>
+
+    <ul>
+        {{#each data.elementToEdit}}
+
+    <li>{{this}}</li>
+        {{/each}}
+    </ul>
+
+
+
+
+
+    {{else}}
+
+    <h2>New Movement</h2>
+
+    {{/if}}
+
+
+
+    <form action="{{data.endpoint}}" method="{{data.method}}">
+        <div class="row g-2">
+
+
+
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="date" class="form-control date-picker form-field" id="date-input" name="date" required>
+                    <label for="date-input">Date</label>
+                </div>
+            </div>
+
+            {{#if data.method}}
+            <div class="col-md">
+                <div class="form-floating">
+                    <select class="form-select form-field" id="type-input" name="type">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                    <label for="type-input">Type</label>
+                </div>
+            </div>
+            {{/if}}
+
+
+
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control form-field" id="description-input"
+                        placeholder="Description..." name="description" required>
+                    <label for="description-input">Description</label>
+                </div>
+            </div>
+
+
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="number" class="form-control form-field" id="amount-input" placeholder="Amount..."
+                        min="1" name="amount" required>
+                    <label for="amount-input">Amount</label>
+                </div>
+            </div>
+
+            {{#if data.id}}
+
+            <div class="col-md">
+                <div class="">
+                    <input type="submit" class="form-control boton-enviar align-middle btn btn-primary"
+                        data-id="{{data.id}}" value="Enviar" data-method="PUT" data-url="http://localhost:3000/movements/{{data.id}}">
+
+                </div>
+            </div>
+
+            {{else}}
+
+            <div class="col-md">
+                <div class="">
+                    <input type="submit" class="form-control boton-enviar align-middle btn btn-primary" value="Enviar"
+                        data-method="POST">
+
+                </div>
+            </div>
+
+            {{/if}}
+
+
+
+        </div>
+    </form>
+</div>
