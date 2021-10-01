@@ -30,11 +30,7 @@ app.engine(
     })
 );
 
-
 app.set("view engine", "handlebars");
-
-
-
 
 app.get('/', async (req, res) => {
     res.status(200);
@@ -52,7 +48,6 @@ app.get('/', async (req, res) => {
             
       
         })
-        console.log('no existen movimientos')
     }
 
     
@@ -65,4 +60,4 @@ app.get('/test', (req, res) => {
 
 app.use('/movements', require('./routes/movements'));
 
-app.listen(PORT, console.log(`escuchando en el puerto ${PORT}`))
+app.listen(PORT, console.log(`listening on PORT: ${PORT}`))

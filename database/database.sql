@@ -5,7 +5,7 @@ CREATE TABLE budget(
     movement_date VARCHAR NOT NULL,
     movement_type VARCHAR(15) NOT NULL,
     movement_description VARCHAR(200) NOT NULL,
-    movement_amount MONEY NOT NULL
+    movement_amount INTEGER NOT NULL
 );
 
 INSERT INTO budget (movement_date, movement_type, movement_description, movement_amount) VALUES ('2020-05-25', 'ingreso', 'regalo de mi papa', '25000');
